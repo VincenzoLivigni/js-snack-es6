@@ -8,8 +8,8 @@ Snack2**
 Creare un array di oggetti di squadre di calcio. [✓]
 Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti. [✓]
 Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0. [✓]
-Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
-Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”. [✓]
+Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console. [✓]
 */
 
 // creo un array di oggetti per le bici
@@ -67,6 +67,10 @@ const squadre = [
 ];
 // console.log(squadre);
 
+
+// creo array vuoto per nome e falli subiti
+const nomiFalli = [];
+
 // ciclo nell'array per prendere gli oggetti singolarmente
 for (let i = 0; i < squadre.length; i++) {
     const statistiche = squadre[i];
@@ -79,11 +83,17 @@ for (let i = 0; i < squadre.length; i++) {
         statistiche.puntiFatti = Math.floor(Math.random() *98) +1;
         statistiche.falliSubiti = Math.floor(Math.random() *98) +1;
     }
+
+    // pusho l'oggetto aggiornato nell'array vuoto 
+    nomiFalli.push ({
+    // prendo tutti nomi delle squadre
+    nome: statistiche.nome,
+    // prendo tutti i falli subiti delle squadre
+    falliSubiti: statistiche.falliSubiti,
+})
+
 }
-console.log(squadre)
-
-
-/*
-Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
-Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
-*/
+// log delle squadre con tutte le proprietà
+console.log(squadre);
+// log solo di nomi e falliSubiti
+console.log(nomiFalli);
