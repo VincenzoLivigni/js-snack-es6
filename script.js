@@ -33,12 +33,15 @@ const biciclette = [
   { nome: "Eco Road", peso: 9.7, },
 ]
 
+
+console.log(biciclette);
+
 // variabile di supporto
 let pesoMinore = biciclette[0];
 
     // ciclo per trovare il peso di tutte le biciclette
     for (let i = 0; i < biciclette.length; i++) {
-        // console.log(biciclette[i].peso);
+         console.log(biciclette[i].peso);
         
         if (biciclette[i].peso < pesoMinore.peso) {
             pesoMinore = biciclette[i];
@@ -46,4 +49,5 @@ let pesoMinore = biciclette[0];
     }
     console.log(`La bicicletta che pesa di meno è ${pesoMinore.nome} e pesa ${pesoMinore.peso} kg`);
 
- 
+    const biciLeggeraEl = document.getElementById("biciLeggera");
+    biciLeggeraEl.innerHTML = `La bicicletta che pesa di meno è ${pesoMinore.nome} e pesa ${pesoMinore.peso} kg`;
