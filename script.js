@@ -18,22 +18,32 @@ const biciclette = [
     // Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 
     // descrizione 1a bici 
-  { nome: "Mountain Pro", peso: 12.5 },
+  { nome: "Mountain Pro", peso: 12.5, },
 
     // descrizione 2a bici
-  { nome: "City Ride", peso: 10.8 },
+  { nome: "City Ride", peso: 10.8, },
 
     // descrizione 3a bici
-  { nome: "Speedster", peso: 8.9 },
+  { nome: "Speedster", peso: 8.9, },
 
     // descrizione 4a bici
-  { nome: "Trail Master", peso: 13.2 },
+  { nome: "Trail Master", peso: 13.2, },
 
     // descrizione 5a bici
-  { nome: "Eco Road", peso: 9.7 }
+  { nome: "Eco Road", peso: 9.7, },
 ]
 
+// variabile di supporto
+let pesoMinore = biciclette[0];
 
+    // ciclo per trovare il peso di tutte le biciclette
+    for (let i = 0; i < biciclette.length; i++) {
+        // console.log(biciclette[i].peso);
+        
+        if (biciclette[i].peso < pesoMinore.peso) {
+            pesoMinore = biciclette[i];
+        }
+    }
+    console.log(`La bicicletta che pesa di meno è ${pesoMinore.nome} e pesa ${pesoMinore.peso} kg`);
 
-
-//
+ 
